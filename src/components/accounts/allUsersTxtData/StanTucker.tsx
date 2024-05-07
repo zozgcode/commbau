@@ -6,8 +6,8 @@ import { StanTuckerTxData } from "../transactionData/TrxData";
 import Link from "next/link";
 
 export default function StanTuckerStanTucker() {
-  const top7TxData = StanTuckerTxData.slice(0, 7); // Fetching only the first five transactions
-  const moreThanSeven = StanTuckerTxData.length > 7;
+  const top7TxData = StanTuckerTxData.slice(0, 100); // Fetching only the first five transactions
+  const moreThanSeven = StanTuckerTxData.length > 100;
 
   return (
     <>

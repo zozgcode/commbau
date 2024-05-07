@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Testing from "../allUsersTxtData/Testing";
-import { TestingTwoTxData, TestingTxData } from "./TrxData";
+import { StanTuckerTxData, TestingTwoTxData, TestingTxData } from "./TrxData";
 import { TbArrowBackUpDouble, TbArrowForwardUpDouble } from "react-icons/tb";
 
 export default function TransactionHistory() {
@@ -71,6 +71,39 @@ export default function TransactionHistory() {
                       {txt.whatUsed === "Credit" && <TbArrowBackUpDouble />}
                       {txt.whatUsed === "Debit" && <TbArrowForwardUpDouble />}
                     </div>
+                    <div>
+                      <p className="trxName text-[15px] sm:text-base">
+                        {txt.txName}
+                      </p>
+                      <p className="text-[13px] mt-1 text-gray-400">
+                        {txt.date}
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className={`text-right ${
+                      txt.whatUsed === "Credit"
+                        ? "text-green-500"
+                        : "text-red-500"
+                    }`}
+                  >
+                    <p className="font-semibold text-[15px] sm:text-base">
+                      {txt.amount}
+                    </p>
+                    <p className="text-sm md:text-base">{txt.whatUsed}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          {user.username === "Stan1940" && (
+            <div>
+              {StanTuckerTxData.map((txt, i) => (
+                <div
+                  key={i}
+                  className="border justify-between flex bg-white p-4 max-[470px]:px-2 w-full rounded-lg"
+                >
+                  <div className="flex gap-1">
                     <div>
                       <p className="trxName text-[15px] sm:text-base">
                         {txt.txName}
