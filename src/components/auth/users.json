@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Stan Tucker",
+      "profileImg": "",
+      "cardName": "Stan Tucker",
+      "username": "Stan1940",
+      "password": "Stan1940@1",
+      "checkingAmount": "400,000.00",
+      "checkingAccountNo": "...9998",
+      "createdOn": "7/5/2024 - d/m/y"
+    }
+  ]
+}
